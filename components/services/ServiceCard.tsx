@@ -106,7 +106,9 @@ export default function ServiceCard({
         )}
 
         <a
-          href="#"
+          href="https://cal.com/clint-cena"
+          target="_blank"
+          rel="noopener noreferrer"
           className="font-jost font-normal text-[12px] uppercase tracking-[0.12em] text-ink border-b border-black w-fit pb-0.5 hover:opacity-60 transition-opacity"
         >
           Book a Free Discovery Call →

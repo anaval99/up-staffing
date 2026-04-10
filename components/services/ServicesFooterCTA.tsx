@@ -8,7 +8,9 @@ export default function ServicesFooterCTA() {
         Let&apos;s talk about what you need — and build something that works.
       </p>
       <a
-        href="#"
+        href="https://cal.com/clint-cena"
+        target="_blank"
+        rel="noopener noreferrer"
         className="font-jost font-normal text-[12px] uppercase tracking-[0.14em] text-cream border border-white/40 px-8 py-4 hover:bg-cream hover:text-ink transition-all inline-block"
       >
         Book a Free Discovery Call
