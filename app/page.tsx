@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Nav from "@/components/Nav";
+import Partners from "@/components/Partners";
 import ServicesFooterCTA from "@/components/services/ServicesFooterCTA";
 
 const services = [
@@ -71,6 +72,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Partners marquee */}
+      <Partners />
 
       {/* Services overview */}
       <section className="py-20 px-6">
