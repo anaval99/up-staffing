@@ -25,6 +25,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Allow loading dev resources (HMR, fonts, client chunks) when the site is
+  // opened via the LAN/WSL network IP instead of localhost. Dev-only; ignored
+  // in production builds.
+  allowedDevOrigins: ["172.19.176.1"],
   async headers() {
     return [
       {
