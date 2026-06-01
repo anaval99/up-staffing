@@ -71,16 +71,24 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-[#1A1A1A] py-28 md:py-36 px-6">
         <div className="max-w-350 mx-auto">
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-6" data-reveal>
             <p className="font-jost text-[14px] font-semibold uppercase tracking-[0.15em] text-[#6B6B6B]">
               About UpVirtual
             </p>
             <div className="w-10 h-[2px] bg-[#B8A88A]" />
           </div>
-          <h1 className="font-cormorant text-[40px] md:text-[64px] font-light text-[#F5F5F0] leading-[1.05] max-w-3xl mb-8">
+          <h1
+            className="font-cormorant text-[40px] md:text-[64px] font-light text-[#F5F5F0] leading-[1.05] max-w-3xl mb-8"
+            data-reveal
+            style={{ "--reveal-delay": "120ms" } as React.CSSProperties}
+          >
             Built Different. On Purpose.
           </h1>
-          <p className="font-jost font-light text-[16px] md:text-[20px] leading-[1.7] text-[#C8C5BC] max-w-2xl">
+          <p
+            className="font-jost font-light text-[16px] md:text-[20px] leading-[1.7] text-[#C8C5BC] max-w-2xl"
+            data-reveal
+            style={{ "--reveal-delay": "240ms" } as React.CSSProperties}
+          >
             We started UpVirtual because we saw too many businesses getting burned by agencies that overpromise and underdeliver. So we built something better — a team that&apos;s fast, technical, and obsessed with results.
           </p>
         </div>
@@ -89,7 +97,7 @@ export default function AboutPage() {
       {/* Our Story */}
       <section className="py-20 md:py-[120px] px-6">
         <div className="max-w-350 mx-auto grid md:grid-cols-2 gap-16 items-start">
-          <div>
+          <div data-reveal>
             <p className="font-jost text-[14px] font-semibold uppercase tracking-[0.15em] text-[#6B6B6B] mb-4">
               Our Story
             </p>
@@ -104,7 +112,7 @@ export default function AboutPage() {
               &ldquo;
             </div>
           </div>
-          <div className="[border-left:3px_solid_#B8A88A] pl-8 space-y-6">
+          <div className="[border-left:3px_solid_#B8A88A] pl-8 space-y-6" data-reveal style={{ "--reveal-delay": "120ms" } as React.CSSProperties}>
             <p className="font-jost font-light text-[16px] md:text-[18px] leading-[1.8] text-[#2D2D2D]">
               Most agencies sell you a website and disappear. Or worse — they lock you into a 6-month retainer with nothing to show for it.
             </p>
@@ -124,7 +132,7 @@ export default function AboutPage() {
       {/* What Makes Us Different */}
       <section className="bg-panel py-20 md:py-[120px] px-6">
         <div className="max-w-350 mx-auto">
-          <div className="mb-14">
+          <div className="mb-14" data-reveal>
             <p className="font-jost text-[14px] font-semibold uppercase tracking-[0.15em] text-[#6B6B6B] mb-4">
               What Makes Us Different
             </p>
@@ -133,10 +141,12 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {differentiators.map((item) => (
+            {differentiators.map((item, i) => (
               <div
                 key={item.number}
                 className="bg-white rounded-xl p-10 shadow-[0_2px_8px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)] hover:-translate-y-0.5 transition-all duration-200"
+                data-reveal
+                style={{ "--reveal-delay": `${(i % 2) * 90}ms` } as React.CSSProperties}
               >
                 <p className="font-cormorant text-[56px] font-light text-[#C8C5BC] leading-none mb-4">
                   {item.number}
@@ -156,7 +166,7 @@ export default function AboutPage() {
       {/* Meet the Team */}
       <section className="py-20 md:py-[120px] px-6">
         <div className="max-w-350 mx-auto">
-          <div className="mb-14">
+          <div className="mb-14" data-reveal>
             <p className="font-jost text-[14px] font-semibold uppercase tracking-[0.15em] text-[#6B6B6B] mb-4">
               The Team
             </p>
@@ -169,6 +179,8 @@ export default function AboutPage() {
               <div
                 key={i}
                 className="bg-white rounded-xl p-10 shadow-[0_2px_8px_rgba(0,0,0,0.06)] [border-top:3px_solid_#B8A88A] flex flex-col"
+                data-reveal
+                style={{ "--reveal-delay": `${i * 110}ms` } as React.CSSProperties}
               >
                 <a
                   href={member.linkedin}
@@ -203,7 +215,7 @@ export default function AboutPage() {
       {/* Our Values */}
       <section className="bg-[#1A1A1A] py-20 md:py-[120px] px-6">
         <div className="max-w-350 mx-auto">
-          <div className="mb-14 text-center">
+          <div className="mb-14 text-center" data-reveal>
             <p className="font-jost text-[14px] font-semibold uppercase tracking-[0.15em] text-[#8A8A8A] mb-4">
               Our Values
             </p>
@@ -212,10 +224,12 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {values.map((value) => (
+            {values.map((value, i) => (
               <div
                 key={value.title}
                 className="bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.08)] rounded-lg p-8"
+                data-reveal
+                style={{ "--reveal-delay": `${(i % 2) * 90}ms` } as React.CSSProperties}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <span className="w-2 h-2 rounded-full bg-[#B8A88A] shrink-0" />
@@ -233,10 +247,14 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="bg-[#1A1A1A] border-t border-[rgba(255,255,255,0.08)] py-20 md:py-[120px] px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <h2 className="font-cormorant text-[32px] md:text-[48px] font-light text-[#F5F5F0] leading-tight mb-6">
+          <h2 className="font-cormorant text-[32px] md:text-[48px] font-light text-[#F5F5F0] leading-tight mb-6" data-reveal>
             Ready to Work With a Team That Actually Delivers?
           </h2>
-          <p className="font-jost font-light text-[16px] md:text-[18px] text-[#B8B5AC] mb-10 leading-relaxed">
+          <p
+            className="font-jost font-light text-[16px] md:text-[18px] text-[#B8B5AC] mb-10 leading-relaxed"
+            data-reveal
+            style={{ "--reveal-delay": "100ms" } as React.CSSProperties}
+          >
             Book a free discovery call and let&apos;s figure out exactly what your business needs — no pitch, no pressure.
           </p>
           <a
@@ -244,6 +262,8 @@ export default function AboutPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="font-jost font-semibold text-[14px] uppercase tracking-[0.12em] text-[#1A1A1A] bg-[#F5F5F0] px-10 py-5 rounded-lg hover:bg-white transition-colors inline-block"
+            data-reveal
+            style={{ "--reveal-delay": "200ms" } as React.CSSProperties}
           >
             Book a Free Discovery Call →
           </a>

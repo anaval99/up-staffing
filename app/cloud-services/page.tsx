@@ -123,10 +123,14 @@ export default function CloudServicesPage() {
         />
         <div className="absolute inset-0 bg-[rgba(26,26,26,0.60)]" />
         <div className="relative z-10 max-w-350 mx-auto w-full">
-          <p className="font-jost text-[11px] uppercase tracking-[0.25em] text-[rgba(250,249,247,0.60)] mb-3">
+          <p className="font-jost text-[11px] uppercase tracking-[0.25em] text-[rgba(250,249,247,0.60)] mb-3" data-reveal>
             Cloud Services
           </p>
-          <h1 className="font-cormorant text-[48px] md:text-[64px] font-light text-cream leading-tight max-w-2xl">
+          <h1
+            className="font-cormorant text-[48px] md:text-[64px] font-light text-cream leading-tight max-w-2xl"
+            data-reveal
+            style={{ "--reveal-delay": "120ms" } as React.CSSProperties}
+          >
             Everything Included. Nothing to Manage.
           </h1>
         </div>
@@ -134,7 +138,7 @@ export default function CloudServicesPage() {
 
       {/* Intro strip */}
       <div className="bg-cream border-b border-[rgba(0,0,0,0.08)] px-6 py-10">
-        <p className="font-jost font-light text-[15px] leading-[1.85] text-[rgba(26,26,26,0.58)] max-w-2xl mx-auto text-center">
+        <p className="font-jost font-light text-[15px] leading-[1.85] text-[rgba(26,26,26,0.58)] max-w-2xl mx-auto text-center" data-reveal>
           Every plan includes a fully managed VPS, open-source cloud storage software, and ongoing maintenance — so your team can focus on work, not servers.
         </p>
       </div>
@@ -142,7 +146,7 @@ export default function CloudServicesPage() {
       {/* Service cards */}
       <main>
         {cloudServices.map((service) => (
-          <div key={service.number} className="grid md:grid-cols-2 border-b border-[rgba(0,0,0,0.08)]">
+          <div key={service.number} className="grid md:grid-cols-2 border-b border-[rgba(0,0,0,0.08)]" data-reveal>
             {/* Image half */}
             <div
               className={`relative overflow-hidden min-h-[320px] md:min-h-[480px] ${

@@ -48,13 +48,24 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[rgba(26,26,26,0.55)]" />
         <div className="relative z-10 max-w-350 mx-auto w-full">
-          <p className="font-jost text-[11px] uppercase tracking-[0.30em] text-[rgba(250,249,247,0.60)] mb-5">
+          <p
+            className="font-jost text-[11px] uppercase tracking-[0.30em] text-[rgba(250,249,247,0.60)] mb-5"
+            data-reveal
+          >
             UpVirtual — Digital Agency
           </p>
-          <h1 className="font-cormorant text-[52px] md:text-[76px] font-light text-cream leading-[1.05] max-w-3xl mb-8">
+          <h1
+            className="font-cormorant text-[52px] md:text-[76px] font-light text-cream leading-[1.05] max-w-3xl mb-8"
+            data-reveal
+            style={{ "--reveal-delay": "120ms" } as React.CSSProperties}
+          >
             Elevate Your Brand. Scale Your Business.
           </h1>
-          <div className="flex flex-wrap gap-4">
+          <div
+            className="flex flex-wrap gap-4"
+            data-reveal
+            style={{ "--reveal-delay": "240ms" } as React.CSSProperties}
+          >
             <a
               href="/services"
               className="font-jost font-normal text-[12px] uppercase tracking-[0.14em] text-cream border border-white/40 px-8 py-4 hover:bg-cream hover:text-ink transition-all inline-block"
@@ -79,7 +90,7 @@ export default function Home() {
       {/* Services overview */}
       <section className="py-20 px-6">
         <div className="max-w-350 mx-auto">
-          <div className="mb-14">
+          <div className="mb-14" data-reveal>
             <p className="font-jost text-[10px] uppercase tracking-[0.25em] text-[rgba(26,26,26,0.40)] mb-3">
               What We Do
             </p>
@@ -89,11 +100,13 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[rgba(0,0,0,0.08)]">
-            {services.map((s) => (
+            {services.map((s, i) => (
               <a
                 key={s.label}
                 href="/services"
                 className="group relative bg-cream overflow-hidden block"
+                data-reveal
+                style={{ "--reveal-delay": `${i * 90}ms` } as React.CSSProperties}
               >
                 <div className="relative h-56 overflow-hidden">
                   <Image
@@ -123,6 +136,8 @@ export default function Home() {
             <a
               href="/cloud-services"
               className="group relative bg-ink overflow-hidden block"
+              data-reveal
+              style={{ "--reveal-delay": `${services.length * 90}ms` } as React.CSSProperties}
             >
               <div className="relative h-56 overflow-hidden">
                 <Image
@@ -152,7 +167,7 @@ export default function Home() {
       {/* Process strip */}
       <section className="bg-ink py-20 px-6">
         <div className="max-w-350 mx-auto">
-          <div className="mb-14 text-center">
+          <div className="mb-14 text-center" data-reveal>
             <p className="font-jost text-[10px] uppercase tracking-[0.25em] text-[rgba(250,249,247,0.40)] mb-3">
               How It Works
             </p>
@@ -165,8 +180,13 @@ export default function Home() {
               { step: "01", title: "Discovery Call", body: "We learn about your business, goals, and what's holding you back." },
               { step: "02", title: "Strategy & Design", body: "We build a tailored plan and create assets that match your brand." },
               { step: "03", title: "Launch & Support", body: "We deliver, launch, and stay available as your business grows." },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
+            ].map((item, i) => (
+              <div
+                key={item.step}
+                className="text-center"
+                data-reveal
+                style={{ "--reveal-delay": `${i * 120}ms` } as React.CSSProperties}
+              >
                 <p className="font-cormorant text-[56px] font-light text-[rgba(250,249,247,0.08)] leading-none mb-2">
                   {item.step}
                 </p>
@@ -183,7 +203,7 @@ export default function Home() {
       {/* About section */}
       <section className="bg-panel border-t border-[#D4D0C8] py-20 md:py-[120px] px-6">
         <div className="max-w-350 mx-auto">
-          <div className="max-w-2xl mb-10">
+          <div className="max-w-2xl mb-10" data-reveal>
             <p className="font-jost text-[14px] font-semibold uppercase tracking-[0.15em] text-[#6B6B6B] mb-5">
               Who We Are
             </p>
@@ -199,7 +219,7 @@ export default function Home() {
           </div>
 
           {/* Stats row */}
-          <div className="grid grid-cols-3 divide-x divide-[#D4D0C8] border border-[#D4D0C8] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08)] mb-12">
+          <div className="grid grid-cols-3 divide-x divide-[#D4D0C8] border border-[#D4D0C8] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08)] mb-12" data-reveal>
             {[
               { number: "Global", label: "Clients Worldwide" },
               { number: "24hr", label: "Average Response Time" },
@@ -219,6 +239,7 @@ export default function Home() {
           <a
             href="/about"
             className="font-jost font-semibold text-[13px] uppercase tracking-[0.12em] text-[#F5F5F0] bg-[#1A1A1A] px-8 py-4 rounded-lg hover:bg-[#2D2D2D] transition-colors inline-block"
+            data-reveal
           >
             Meet the Team →
           </a>

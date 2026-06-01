@@ -44,7 +44,7 @@ export default function ServiceCard({
   imageSrc,
 }: ServiceCardProps) {
   return (
-    <div className="grid md:grid-cols-2 border-b border-[rgba(0,0,0,0.08)]">
+    <div className="grid md:grid-cols-2 border-b border-[rgba(0,0,0,0.08)]" data-reveal>
       {/* Image half */}
       <div
         className={`relative overflow-hidden min-h-[320px] md:min-h-[480px] ${
